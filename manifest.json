@@ -1,0 +1,29 @@
+
+{
+  "manifest_version": 3,
+  "name": "Roboflow Universe Thumbnail Enhancer",
+  "version": "1.0",
+  "description": "Enhances thumbnails on the Roboflow Universe website with animated previews.",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://universe.roboflow.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://universe.roboflow.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "externally_connectable": {
+    "matches": ["*://example.com/*"]
+  }
+}
